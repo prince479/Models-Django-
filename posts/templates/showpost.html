@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<div class="container">
+    <table class="table table-bordered table-dark">
+  <thead>
+  <style>
+      h1{
+      background-color:#343a40;
+      color:white;
+      }
+  </style>
+  <h1 align="center">POST TABLE</h1>
+    <tr>
+      <th scope="col">id</th>
+      <th scope="col">Title</th>
+      <th scope="col">Desc</th>
+      <th scope="col">#</th>
+      <th scope="col">#</th>
+    </tr>
+  </thead>
+  <tbody>
+  {% for post in p%}
+    <tr>
+      <td>{{post.id}}</td>
+      <td>{{post.title}}</td>
+      <td>{{post.desc}}</td>
+      <td><a href="#">Edit</a> </td>
+      <td><a href="#">Delete</a></td>
+
+        {% endfor %}
+    </tr>
+<caption> All POSTS</caption>
+  </tbody>
+</table>
+</div>
+
+
+
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+
+
+
+<form method="POST">
+    {% csrf_token %}
+    <p><input type="Text" name="title" placeholder="title"> </p>
+    <p><textarea  name="desc" placeholder="title"></textarea> </p>
+    <p><button type="submit" name="add">ADD POST</button> </p>
+</form>
+{% if messages %}
+<div class="messages">
+    {% for message in messages %}
+    <div>{{ message }}</div>
+    {% endfor %}
+</div>
+{% endif %}
+
+</body>
+</html>
